@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario</title>
+
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+        header {
+            background-color: #333;
+            color: #fff;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px;
+        }
+        h1 {
+            margin: 0;
+            font-size: 24px;
+        }
+        nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+        }
+        nav li {
+            margin-left: 20px;
+        }
+        nav a {
+            color: #fff;
+            text-decoration: none;
+        }
+        main {
+            margin: 20px auto;
+            max-width: 600px;
+            padding: 20px;
+            border: 1px solid #ccc;
+        }
+        h2 {
+            margin-top: 0;
+            font-size: 18px;
+            font-weight: normal;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        input, textarea {
+            padding: 5px;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+            width: 100%;
+            box-sizing: border-box;
+            margin-bottom: 10px;
+        }
+        input[type="submit"] {
+            background-color: #333;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 3px;
+            cursor: pointer;
+        }
+        fieldset {
+            border: none;
+            margin-bottom: 20px;
+            padding: 0;
+        }
+        legend {
+            font-size: 16px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+	<header>
+		<h1>Tienda en línea</h1>
+		<nav>
+			<ul>
+				<li><a href="#">Inicio</a></li>
+				<li><a href="#">Productos</a></li>
+				<li><a href="#">Contacto</a></li>
+			</ul>
+		</nav>
+	</header>
+	<main>
+		<form method="post" action="procesar.php">
+			<h2>Registro de usuario</h2>
+			<fieldset>
+				<legend>Datos personales</legend>
+				<label for="nombre" >Nombre:</label>
+				<input type="text" id="nombre" name="nombre" required>
+				<label for="apellidos">Apellidos:</label>
+				<input type="text" id="apellidos" name="apellidos" required>
+				<label for="email">Email:</label>
+				<input type="email" id="email" name="email" required>
+				<label for="telefono">Teléfono:</label>
+				<input type="tel" id="telefono" name="telefono" required>
+				<label for="contraseña">Contraseña:</label>
+				<input type="password" id="contraseña" name="contraseña" required>
+				<label for="confirmacion">Confirmar contraseña:</label>
+				<input type="password" id="confirmacion" name="confirmacion" required>
+			</fieldset>
+			<fieldset>
+				<legend>Dirección de envío</legend>
+				<label for="calle">Calle:</label>
+				<input type="text" id="calle" name="calle" required>
+				<label for="numero">Número:</label>
+				<input type="text" id="numero" name="numero" required>
+				<label for="localidad">Localidad:</label>
+				<input type="text" id="localidad" name="localidad" required>
+				<label for="ciudad">Ciudad:</label>
+				<input type="text" id="ciudad" name="ciudad" required>
+				<label for="Provincia">Provincia:</label>
+				<input type="text" id="Provincia" name="Provincia" required>
+				<label for="codigo">Código postal:</label>
+				<input type="text" id="codigo" name="codigo" required>
+			</fieldset>
+			<fieldset>
+				<legend>Método de pago</legend>
+				<label for="tarjeta">Número de tarjeta:</label>
+				<input type="text" id="tarjeta" name="tarjeta" required>
+				<label for="vencimiento">Fecha de vencimiento:</label>
+				<input type="month" id="vencimiento" name="vencimiento" required>
+				<label for="cvv">CVV:</label>
+                <input type="text" id="cvv" name="cvv" required>
+                </fieldset>
+                <fieldset>
+                    <legend>Comentarios adicionales</legend>
+                    <label for="comentarios">Comentarios:</label>
+                    <textarea id="comentarios" name="comentarios"></textarea>
+                </fieldset>
+                <fieldset>
+                    <legend>Enviar notificación por SMS</legend>
+                    <label for="sms">Número de teléfono:</label>
+                    <input type="tel" id="sms" name="sms">
+                    <label for="mensaje">Mensaje:</label>
+                    <textarea id="mensaje" name="mensaje"></textarea>
+                </fieldset>
+                <input type="submit" value="Enviar">
+            </form>
+        </main>
+        <footer>
+            <p>&copy; 2023 Formulario de Registro.</p>
+        </footer>
+
+</body>
+</html>
